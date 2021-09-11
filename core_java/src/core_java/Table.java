@@ -7,13 +7,19 @@ public class Table {
 	{
 		int n;
 		Scanner pp=new Scanner(System.in);
-		System.out.println("Enter the value of n");
+		System.out.println("Where do you want the table from 1 to ?");
 		n=pp.nextInt();
-		for(int i=1;i<=10;i++) {
+		for(int i=1;i<=n;i++) {
+			for(int j=1;j<=10;j++) {
+				int m;
+				m=j*i;
+				System.out.print(i+" * "+j+" = "+m);
+				System.out.println("");
+				
+			}
+			System.out.println("");
 			
-			int m;
-			m=n*i;
-			System.out.println(""+m);
+			
 			
 		}
 		pp.close();
