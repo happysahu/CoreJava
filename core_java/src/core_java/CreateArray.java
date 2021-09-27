@@ -12,7 +12,7 @@ public class CreateArray {
 			i++;
 			j--;
 
-		//System.out.println(array[3]);
+		
 			
 		}
 				

@@ -7,10 +7,11 @@ public class AllinOne {
 	public static void main(String[]args) {
 		char operator;
 		do {
+		
 		Scanner hs=new Scanner (System.in);
 		System.out.println("Choose a program");
-		System.out.println("A = Prime Number \nB = Area of circle \nC = Reverse Digit\nD = Maximum Of Three Numbers\nE = Factorial\nF = Triangle\nG = Fibonacci Series\nH = Reverse digit\nI = Random Integer\nJ = Sum of numbers\nK = Sum of all integer divisible by 7\nL = Armstrong number\n"
-				+ "M = Palindrome  ");
+		System.out.println("A = Prime Number \nB = Area of circle \nC = Reverse Digit\nD = Maximum Of Three Numbers\nE = Factorial\nF = Triangle\nG = Fibonacci Series\nH = Table\nI = Random Integer\nJ = Sum of numbers\nK = Sum of all integer divisible by 7\nL = Armstrong number\n"
+				+ "M = Palindrome  \nN = Vowel");
 		operator=hs.next().charAt(0);
 			switch(operator) {
 		case 'A':
@@ -111,16 +112,23 @@ public class AllinOne {
 				}
 			break;
 		case 'H':
-			 int nh,rh,sh=0;
-			 System.out.println("enter the value of n");
-			 nh=hs.nextInt();
-			 while(nh>0)
-			 {
-				 rh=nh%10;
-				 sh=(sh*10)+rh;
-				nh=nh/10;
-			 }
-			 System.out.println(" Reverse number is "+sh);
+			int nh;
+			
+			System.out.println("Where do you want the table from 1 to ?");
+			nh=hs.nextInt();
+			for(int ih=1;ih<=nh;ih++) {
+				for(int jh=1;jh<=10;jh++) {
+					int m;
+					m=jh*ih;
+					System.out.print(ih+" * "+jh+" = "+m);
+					System.out.println("");
+					
+				}
+				System.out.println("");
+				
+				
+				
+			}
 			break;
 		case 'I':
 			int ii;
@@ -199,6 +207,22 @@ public class AllinOne {
 			  System.out.println("not palindrome");
 			  }
 			break;
+		case 'N':
+			char ch;
+			
+			System.out.println("Enter any Character");
+			ch=hs.next().charAt(0);
+			 if(ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u' ) {
+		            System.out.println(ch + " is vowel");
+			 }
+			 else if(ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U') {
+				 System.out.println(ch + " is vowel");
+				 
+			 }
+		            else {
+		            System.out.println(ch + " is consonant");
+		            }
+			break;
 			default:
 				System.out.println("Invalid choice!");
 				break;
@@ -209,6 +233,4 @@ public class AllinOne {
 			while(operator=='y'||operator=='Y');
 		System.out.println("Good bye");
 		}
-
-
 }
