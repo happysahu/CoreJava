@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class Table {
 	public static void main(String[]args)
 	{
+
 		int n;
 		Scanner pp=new Scanner(System.in);
 		System.out.println("Where do you want the table from 1 to ?");
@@ -24,5 +25,4 @@ public class Table {
 		}
 		pp.close();
 	}
-
 }

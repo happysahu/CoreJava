@@ -1,6 +1,7 @@
 package oops;
 
-public class Account {
+public class Account   {
+	
 	private String number;
 	private String accountType;
 	private double balance;
@@ -20,8 +21,16 @@ public class Account {
 	public void deposit(double d) {
 		this.balance=d+balance;
 	}
-	public void withdrawal(double w) {
+	public void withdrawal(double w) throws InsufficientBalance {
 		this.balance =  balance-w;
+		
+		if (balance <500) {
+			InsufficientBalance e=new InsufficientBalance();
+			//System.out.println(e.getMessage());
+			throw e;
+			
+		}
+		
 		}
 	public double getBalance() {
 		return balance;
@@ -33,15 +42,6 @@ public class Account {
 		this.balance = balance;
 	}
 	
-	public static void main(String[] args) {
-		Account a=new Account();
-		a.setNumber("67437378257");
-		a.setAccountType("Saving");
-		a.setBalance(100);
-		a.withdrawal(50);
-		a.deposit(10);
-		a.paybill(20);
-		System.out.println("Remaning balance is "+a.getBalance());
 	
-}
+	
 }
