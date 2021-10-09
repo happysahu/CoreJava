@@ -10,6 +10,5 @@ public class TestAccount {
 		a.paybill(20);
 		a.withdrawal(600);
 		System.out.println("Remaning balance is "+a.getBalance());
-	
-}
+	}
 }

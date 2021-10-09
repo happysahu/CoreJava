@@ -1,7 +1,6 @@
 package oops;
 
 public class Account   {
-	
 	private String number;
 	private String accountType;
 	private double balance;
@@ -42,6 +41,5 @@ public class Account   {
 		this.balance = balance;
 	}
 	
-	
-	
+		
 }
