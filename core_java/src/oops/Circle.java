@@ -3,11 +3,7 @@ package oops;
 public class Circle extends Shape {
 public int radius;
 
-public Circle() {
-}
-public Circle(int r) {
-	radius=r;
-}
+
 
 public int getRadius() {
 	return radius;
@@ -15,10 +11,11 @@ public int getRadius() {
 public void setRadius(int radius) {
 	this.radius = radius;
 }
+
+@Override
 public double area() {
-	double arr =3.14*radius*radius;
-	return arr;
-	
+	// TODO Auto-generated method stub
+	return 3.14*radius*radius;
 }
 
 }

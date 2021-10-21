@@ -6,9 +6,10 @@ import java.util.Scanner;
 public class AllinOne {
 	public static void main(String[]args) {
 		char operator;
+		Scanner hs=new Scanner (System.in);
 		do {
 		
-		Scanner hs=new Scanner (System.in);
+		
 		System.out.println("Choose a program");
 		System.out.println("A = Prime Number \nB = Area of circle \nC = Reverse Digit\nD = Maximum Of Three Numbers\nE = Factorial\nF = Triangle\nG = Fibonacci Series\nH = Table\nI = Random Integer\nJ = Sum of numbers\nK = Sum of all integer divisible by 7\nL = Armstrong number\n"
 				+ "M = Palindrome  \nN = Vowel");
@@ -232,5 +233,7 @@ public class AllinOne {
 		}
 			while(operator=='y'||operator=='Y');
 		System.out.println("Good bye");
+		hs.close();
 		}
+	
 }

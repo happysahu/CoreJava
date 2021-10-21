@@ -3,12 +3,7 @@ package oops;
 public class Triangle extends Shape {
 	public int base;
 	public int height;
-public Triangle() {
-}
-public Triangle(int a,int b) {
-	base=a;
-	height=b;
-}
+
 	public int getBase() {
 	return base;
 }
@@ -21,9 +16,11 @@ public int getHeight() {
 public void setHeight(int height) {
 	this.height = height;
 }
+	
+	@Override
 	public double area() {
-		double ar=0.5*base*height;
-		return ar;
+		// TODO Auto-generated method stub
+		return 0.5*base*height;
 	}
 	
 

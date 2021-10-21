@@ -1,12 +1,12 @@
 package oops;
 
-public class Shape extends TestPoly {
+public abstract class Shape extends TestPoly {
 	public String color;
 	public int Borderwidth;
 	public String getColor() {
 		return color;
 	}
-	public void setColor(String color) {
+	public void setColor(String color) {	
 		this.color = color;
 	}
 	
@@ -16,13 +16,14 @@ public class Shape extends TestPoly {
 	public void setBorderwidth(int borderwidth) {
 		Borderwidth = borderwidth;
 	}
-	public double area() {
-		return 0.0;
-	}
+	public abstract double area() ;
+	
+	
 	public static void main(String[] args) {
-		Shape s=new Circle(5);
-		Shape s1=new Rectranglr(5,5);
-		Shape s2=new Triangle(5,3);
+		Shape s=new Circle();
+		Shape s1=new Rectranglr();
+		Shape s2=new Triangle();
+		
 		s.setBorderwidth(5);
 		s.setColor("Red");
 		s1.setBorderwidth(6);
